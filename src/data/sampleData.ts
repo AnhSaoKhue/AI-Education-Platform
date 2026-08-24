@@ -99,9 +99,9 @@ export const INITIAL_LESSON_PLANS: LessonPlan[] = [
 • [NLS1.1] Vận dụng thành thạo thiết bị kỹ thuật số (Bảng tương tác, Máy tính cá nhân) trong giờ học Toán.
 • [NLS2.3] Thu thập và xử lý dữ liệu số qua phần mềm mô phỏng GeoGebra 3D.
 • [NLS3.2] Sáng tạo sản phẩm số: Thiết kế bảng đồ thị tỷ lệ thuận trên Canva Education.
-• [NLS5.2] Sử dụng Trợ lý AI Hoàng Hải Yến ( Anh Sao Khue) để tra cứu bài tập và tự kiểm tra đánh giá kết quả.`,
+• [NLS5.2] Sử dụng Trợ lý AI Miss Anh Sao Khue để tra cứu bài tập và tự kiểm tra đánh giá kết quả.`,
     devicesAndSoftware: `• Thiết bị: Máy tính Giáo viên & Học sinh, Bảng tương tác thông minh Smartboard, Micro thu âm song ngữ, Smart TV kết nối không dây.
-• Phần mềm: GeoGebra 3D, Canva Education, PhET Interactive Simulations, Quizizz, Trợ lý AI Hoàng Hải Yến ( Anh Sao Khue).`,
+• Phần mềm: GeoGebra 3D, Canva Education, PhET Interactive Simulations, Quizizz, Trợ lý AI Miss Anh Sao Khue.`,
     objectives: '1. Về kiến thức: Học sinh phát biểu được công thức hai đại lượng tỷ lệ thuận y = kx (k ≠ 0) và tính chất tỷ số không đổi.\n2. Về năng lực số: Khai thác thành thạo công cụ vẽ đồ thị trực tuyến GeoGebra và làm việc nhóm trực tuyến.\n3. Về ngoại ngữ: Nắm vững từ vựng toán học tiếng Anh về "Direct Proportion" và thực hành giao tiếp song ngữ.',
     keyKnowledge: '- Định nghĩa: y = kx (k là hệ số tỷ lệ, k ≠ 0)\n- Tính chất: Tỷ số hai giá trị tương ứng của hai đại lượng tỷ lệ thuận luôn không đổi (y1/x1 = y2/x2 = ... = k).\n- Biểu diễn đồ thị số: Đồ thị hàm số y = kx là đường thẳng đi qua gốc tọa độ O(0;0).',
     warmupActivity: 'Hoạt động 1: Khởi động số (5 phút): Giáo viên trình chiếu bài toán thực tế trên Quizizz: "Một người đi xe máy với vận tốc 45 km/h không đổi. Nhập công thức tính quãng đường S theo thời gian t trên bảng tương tác".',
@@ -148,7 +148,7 @@ export const INITIAL_LESSON_PLANS: LessonPlan[] = [
 • [NLS3.1] Thu âm, chỉnh sửa clip âm thanh ngắn phát âm Tiếng Anh của cá nhân.
 • [NLS4.2] Tương tác giao tiếp trực tuyến tích cực và lịch sự trong môi trường học tập số.`,
     devicesAndSoftware: `• Thiết bị: Tai nghe có micro thu âm, Máy tính bảng / Laptop, Màn hình thông minh.
-• Phần mềm: Global Success Digital Hub, Google Speech API, Trợ lý AI Hoàng Hải Yến ( Anh Sao Khue).`,
+• Phần mềm: Global Success Digital Hub, Google Speech API, Trợ lý AI Miss Anh Sao Khue.`,
     objectives: '1. Target Language: Vocabulary related to community activities (donate, volunteer, clean up, plant trees).\n2. Digital Competency: Students record their speaking voice and listen to AI pronunciation feedback.\n3. Attitude: Raise awareness of environmental protection and volunteerism.',
     keyKnowledge: 'Vocabulary: volunteer, community, donate, flood victims, elderly people, environmental protection.\nGrammar: Past Simple Tense review.',
     warmupActivity: 'Hoạt động 1: Khởi động Warm-up (5 mins): Watch a 2-minute video about youth volunteers in Vietnam on YouTube / Digital Hub and answer warming-up questions.',
@@ -156,7 +156,7 @@ export const INITIAL_LESSON_PLANS: LessonPlan[] = [
     practiceActivity: 'Hoạt động 3: Thực hành Practice (10 mins): Pair work roleplay speaking practice. Students practice reading aloud and record their voice using the built-in microphone player.',
     lowApplicationActivity: 'Hoạt động 4: Vận dụng thấp Production (5 mins): Fill in missing vocabulary in sentences regarding local community service events.',
     highApplicationActivity: 'Hoạt động 5: Vận dụng cao Deep Learning (5 mins): Discuss and write 3 solutions to help flood victims in central Vietnam using target sentence structures.',
-    consolidationActivity: 'Hoạt động 6: Củng cố Consolidation (3 mins): Summarize lesson keywords and check oral recording scores on Hoàng Hải Yến ( Anh Sao Khue) AI app.',
+    consolidationActivity: 'Hoạt động 6: Củng cố Consolidation (3 mins): Summarize lesson keywords and check oral recording scores on Miss Anh Sao Khue AI app.',
     homeworkActivity: 'Hoạt động 7: Hướng dẫn về nhà Homework (2 mins): Learn new words by heart and record a 1-minute audio passage introducing a local volunteer project.',
     projectActivity: 'Hoạt động 8: Dự án Project Work: "Green Neighborhood Poster & Presentation" in English.',
     teacherActivity: 'Teacher models pronunciation using Speech Synthesis, guides students through oral practice and interactive recording.',

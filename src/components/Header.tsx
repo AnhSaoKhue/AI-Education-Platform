@@ -249,7 +249,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="p-3 border-t border-blue-900/80 bg-blue-950/90 space-y-2">
           <div className="bg-gradient-to-r from-blue-900/60 to-indigo-900/60 p-2.5 rounded-xl border border-cyan-500/20 text-center">
             <div className="text-[11px] text-cyan-200 font-bold flex items-center justify-center gap-1">
-              <Bot className="w-3.5 h-3.5 text-cyan-300" /> Trợ lý AI Hoàng Hải Yến ( Anh Sao Khue)
+              <Bot className="w-3.5 h-3.5 text-cyan-300" /> Trợ lý AI Miss Anh Sao Khue
             </div>
             <div className="text-[9px] text-slate-400 mt-0.5">Soạn bài & Rút kinh nghiệm 24/7</div>
           </div>

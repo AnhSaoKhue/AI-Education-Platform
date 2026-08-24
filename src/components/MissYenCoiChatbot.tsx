@@ -23,7 +23,7 @@ export const MissYenCoiChatbot: React.FC = () => {
     {
       id: 'welcome',
       sender: 'bot',
-      text: 'Xin chào Thầy/Cô! Em là Hoàng Hải Yến ( Anh Sao Khue) - Trợ lý ảo AI của hệ thống AI Education Platform (Anh Sao Khue - Hotline: 0346513056). Em có thể giúp gì cho Thầy/Cô hôm nay ạ?',
+      text: 'Xin chào Thầy/Cô! Em là Miss Anh Sao Khue - Trợ lý ảo AI của hệ thống AI Education Platform (Hotline: 0346513056). Em có thể giúp gì cho Thầy/Cô hôm nay ạ?',
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     },
   ]);
@@ -70,7 +70,7 @@ export const MissYenCoiChatbot: React.FC = () => {
       });
 
       const data = await res.json();
-      const botReply = data.reply || 'Dạ, Hoàng Hải Yến ( Anh Sao Khue) đã ghi nhận thông tin ạ!';
+      const botReply = data.reply || 'Dạ, Miss Anh Sao Khue đã ghi nhận thông tin ạ!';
 
       const botMsg: ChatMessage = {
         id: (Date.now() + 1).toString(),
@@ -90,7 +90,7 @@ export const MissYenCoiChatbot: React.FC = () => {
         {
           id: (Date.now() + 1).toString(),
           sender: 'bot',
-          text: 'Dạ Thầy/Cô ơi, kết nối vừa chập chờn một chút. Thầy/Cô cho Hoàng Hải Yến ( Anh Sao Khue) xin lại câu hỏi nhé!',
+          text: 'Dạ Thầy/Cô ơi, kết nối vừa chập chờn một chút. Thầy/Cô cho Miss Anh Sao Khue xin lại câu hỏi nhé!',
           time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
         },
       ]);
@@ -100,7 +100,7 @@ export const MissYenCoiChatbot: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999] pointer-events-auto">
       {/* Floating Toggle Button */}
       <AnimatePresence>
         {!isOpen && (
@@ -108,11 +108,11 @@ export const MissYenCoiChatbot: React.FC = () => {
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.92 }}
+            whileHover={{ scale: 1.06 }}
+            whileTap={{ scale: 0.94 }}
             onClick={() => setIsOpen(true)}
             id="open-miss-yen-coi-chat"
-            className="flex items-center gap-3 bg-gradient-to-r from-blue-700 via-indigo-600 to-blue-800 text-white px-5 py-3.5 rounded-full shadow-2xl border-2 border-cyan-300/40 hover:shadow-cyan-500/20 group transition-all"
+            className="flex items-center gap-3 bg-gradient-to-r from-blue-700 via-indigo-600 to-blue-800 text-white px-5 py-3.5 rounded-full shadow-2xl border-2 border-cyan-300/60 hover:shadow-cyan-500/30 group transition-all cursor-pointer"
           >
             <div className="relative">
               <div className="w-10 h-10 rounded-full bg-cyan-400/20 border border-cyan-300 flex items-center justify-center text-cyan-200 group-hover:scale-110 transition-transform">
@@ -124,7 +124,7 @@ export const MissYenCoiChatbot: React.FC = () => {
               <div className="text-xs text-cyan-200 font-medium tracking-wide flex items-center gap-1">
                 <Sparkles className="w-3 h-3 text-yellow-300" /> Trợ lý ảo AI
               </div>
-              <div className="text-sm font-bold text-white tracking-wide">Hoàng Hải Yến ( Anh Sao Khue)</div>
+              <div className="text-sm font-bold text-white tracking-wide">Miss Anh Sao Khue</div>
             </div>
           </motion.button>
         )}
@@ -139,10 +139,11 @@ export const MissYenCoiChatbot: React.FC = () => {
             exit={{ opacity: 0, y: 30, scale: 0.95 }}
             transition={{ duration: 0.25 }}
             id="miss-yen-coi-chat-window"
-            className="w-[360px] sm:w-[420px] h-[580px] bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-blue-200 dark:border-blue-900 flex flex-col overflow-hidden"
+            className="w-[92vw] sm:w-[420px] max-w-[440px] h-[560px] max-h-[82vh] bg-slate-900 text-white rounded-2xl shadow-2xl border-2 border-cyan-500/50 flex flex-col overflow-hidden z-[9999]"
+            style={{ backgroundColor: '#0f172a', color: '#ffffff' }}
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white p-4 flex items-center justify-between border-b border-cyan-500/30">
+            <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white p-3.5 sm:p-4 flex items-center justify-between border-b border-cyan-500/40 shrink-0">
               <div className="flex items-center gap-3">
                 <div className="relative">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 p-0.5 shadow">
@@ -153,30 +154,31 @@ export const MissYenCoiChatbot: React.FC = () => {
                   <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-slate-900 rounded-full"></span>
                 </div>
                 <div>
-                  <div className="flex items-center gap-1.5 font-bold text-base text-white">
-                    <span>Hoàng Hải Yến ( Anh Sao Khue)</span>
-                    <ShieldCheck className="w-4 h-4 text-cyan-300" title="Đã xác minh an toàn & chuẩn mực" />
+                  <div className="flex items-center gap-1.5 font-bold text-sm sm:text-base text-white">
+                    <span>Miss Anh Sao Khue</span>
+                    <ShieldCheck className="w-4 h-4 text-cyan-300 shrink-0" title="Đã xác minh an toàn & chuẩn mực" />
                   </div>
-                  <div className="text-xs text-cyan-200 flex items-center gap-2">
-                    <span>Anh Sao Khue</span>
+                  <div className="text-[11px] text-cyan-200 flex items-center gap-2">
+                    <span className="font-semibold text-cyan-300">Trợ lý AI</span>
                     <span>•</span>
-                    <span className="flex items-center gap-0.5"><Phone className="w-3 h-3" /> 0346513056</span>
+                    <span className="flex items-center gap-0.5 text-amber-300 font-bold"><Phone className="w-3 h-3" /> 0346513056</span>
                   </div>
                 </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
                 id="close-miss-yen-coi-chat"
-                className="p-1.5 text-blue-200 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                className="p-1.5 text-slate-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors cursor-pointer"
+                title="Đóng cửa sổ chat"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             {/* Quick Banner info */}
-            <div className="bg-blue-50 dark:bg-slate-800/80 px-4 py-2 text-[11px] text-blue-800 dark:text-cyan-200 flex items-center justify-between border-b border-blue-100 dark:border-slate-700">
+            <div className="bg-slate-950 px-3.5 py-2 text-[11px] text-cyan-200 flex items-center justify-between border-b border-slate-800 shrink-0">
               <span className="flex items-center gap-1">
-                <Heart className="w-3 h-3 text-rose-500 fill-rose-500" /> Trợ lý thông minh, văn phong thực tế & đạo đức
+                <Heart className="w-3.5 h-3.5 text-rose-400 fill-rose-400" /> Trợ lý sư phạm & Giáo án CV 5512
               </span>
               <button
                 onClick={() => {
@@ -184,12 +186,12 @@ export const MissYenCoiChatbot: React.FC = () => {
                     {
                       id: Date.now().toString(),
                       sender: 'bot',
-                      text: 'Em đã làm mới cuộc trò chuyện. Thầy/Cô cần Hoàng Hải Yến ( Anh Sao Khue) hỗ trợ gì tiếp theo ạ?',
+                      text: 'Em đã làm mới cuộc trò chuyện. Thầy/Cô cần Miss Anh Sao Khue hỗ trợ gì tiếp theo ạ?',
                       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
                     },
                   ]);
                 }}
-                className="text-blue-600 dark:text-cyan-400 hover:underline flex items-center gap-0.5"
+                className="text-cyan-400 hover:text-cyan-200 hover:underline flex items-center gap-1 font-semibold cursor-pointer"
                 title="Tạo hội thoại mới"
               >
                 <RefreshCw className="w-3 h-3" /> Làm mới
@@ -197,26 +199,32 @@ export const MissYenCoiChatbot: React.FC = () => {
             </div>
 
             {/* Messages Scroll Area */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-slate-900 text-slate-100">
+            <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-slate-950 text-white select-text">
               {messages.map((msg) => (
                 <div
                   key={msg.id}
                   className={`flex gap-2.5 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   {msg.sender === 'bot' && (
-                    <div className="w-7 h-7 rounded-full bg-blue-600 text-cyan-200 flex items-center justify-center shrink-0 mt-0.5 shadow-sm border border-cyan-400/40">
+                    <div className="w-7 h-7 rounded-full bg-blue-600 text-cyan-200 flex items-center justify-center shrink-0 mt-0.5 shadow-sm border border-cyan-400/50">
                       <Bot className="w-4 h-4" />
                     </div>
                   )}
 
                   <div
-                    className={`max-w-[85%] rounded-2xl p-3.5 text-xs sm:text-sm leading-relaxed shadow-md ${
+                    className={`max-w-[85%] rounded-2xl p-3.5 text-xs sm:text-sm leading-relaxed shadow-lg ${
                       msg.sender === 'user'
-                        ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-br-none font-semibold border border-blue-400/30'
-                        : 'bg-slate-800 text-slate-100 border border-slate-700 rounded-bl-none font-medium'
+                        ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-br-none font-medium border border-blue-400/40'
+                        : 'bg-slate-800 text-white border border-slate-700 rounded-bl-none font-normal'
                     }`}
+                    style={{
+                      color: '#ffffff',
+                      backgroundColor: msg.sender === 'user' ? undefined : '#1e293b'
+                    }}
                   >
-                    <div className="whitespace-pre-wrap leading-relaxed">{msg.text}</div>
+                    <div className="whitespace-pre-wrap leading-relaxed select-text text-white" style={{ color: '#ffffff' }}>
+                      {msg.text}
+                    </div>
                     <div
                       className={`text-[10px] mt-1.5 text-right font-medium ${
                         msg.sender === 'user' ? 'text-blue-200' : 'text-slate-400'
@@ -227,7 +235,7 @@ export const MissYenCoiChatbot: React.FC = () => {
                   </div>
 
                   {msg.sender === 'user' && (
-                    <div className="w-7 h-7 rounded-full bg-indigo-600 text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm border border-indigo-400/40">
+                    <div className="w-7 h-7 rounded-full bg-indigo-600 text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm border border-indigo-400/50">
                       <User className="w-4 h-4" />
                     </div>
                   )}
@@ -235,26 +243,27 @@ export const MissYenCoiChatbot: React.FC = () => {
               ))}
 
               {isLoading && (
-                <div className="flex gap-2.5 items-center text-cyan-300 text-xs italic pl-2 py-1">
-                  <Bot className="w-4 h-4 text-cyan-400 animate-spin" />
-                  <span>Hoàng Hải Yến ( Anh Sao Khue) đang suy nghĩ và chuẩn bị câu trả lời...</span>
+                <div className="flex gap-2.5 items-center text-cyan-300 text-xs italic pl-2 py-1.5 bg-slate-900/60 rounded-xl p-2 border border-slate-800">
+                  <Bot className="w-4 h-4 text-cyan-400 animate-spin shrink-0" />
+                  <span>Miss Anh Sao Khue đang suy nghĩ và chuẩn bị câu trả lời...</span>
                 </div>
               )}
               <div ref={messagesEndRef} />
             </div>
 
             {/* Quick Prompts Suggestions */}
-            <div className="px-3 py-2.5 bg-slate-950 border-t border-slate-800">
+            <div className="px-3 py-2 bg-slate-900 border-t border-slate-800 shrink-0">
               <div className="text-[11px] font-bold text-amber-400 mb-1.5 flex items-center gap-1">
-                <Sparkles className="w-3.5 h-3.5 text-amber-400" /> Trình gợi ý câu hỏi nhanh:
+                <Sparkles className="w-3.5 h-3.5 text-amber-400" /> Gợi ý câu hỏi nhanh:
               </div>
               <div className="flex gap-1.5 overflow-x-auto pb-1 scrollbar-thin">
                 {QUICK_PROMPTS.map((prompt, idx) => (
                   <button
                     key={idx}
+                    type="button"
                     disabled={isLoading}
                     onClick={() => handleSend(prompt)}
-                    className="whitespace-nowrap bg-slate-800 hover:bg-slate-700 active:bg-slate-600 border border-slate-700 hover:border-cyan-400/50 text-cyan-200 hover:text-white text-xs font-semibold px-3 py-1.5 rounded-full transition-all shrink-0 shadow-sm cursor-pointer"
+                    className="whitespace-nowrap bg-slate-800 hover:bg-slate-700 active:bg-slate-600 border border-slate-700 hover:border-cyan-400/60 text-cyan-200 hover:text-white text-xs font-semibold px-2.5 py-1.5 rounded-full transition-all shrink-0 shadow-sm cursor-pointer disabled:opacity-50"
                   >
                     {prompt}
                   </button>
@@ -268,22 +277,24 @@ export const MissYenCoiChatbot: React.FC = () => {
                 e.preventDefault();
                 handleSend();
               }}
-              className="p-3 bg-slate-950 border-t border-slate-800 flex items-center gap-2"
+              className="p-3 bg-slate-950 border-t border-slate-800 flex items-center gap-2 shrink-0"
             >
               <input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Hỏi Hoàng Hải Yến ( Anh Sao Khue) bất cứ điều gì..."
+                placeholder="Hỏi Miss Anh Sao Khue bất cứ điều gì..."
                 disabled={isLoading}
-                className="flex-1 bg-slate-900 border border-slate-700 focus:border-cyan-400 text-white placeholder:text-slate-500 text-xs sm:text-sm px-3.5 py-2.5 rounded-xl focus:outline-none focus:ring-1 focus:ring-cyan-400 font-medium shadow-inner"
+                className="flex-1 bg-slate-900 border border-slate-700 focus:border-cyan-400 text-white placeholder:text-slate-400 text-xs sm:text-sm px-3.5 py-2.5 rounded-xl focus:outline-none focus:ring-1 focus:ring-cyan-400 font-medium shadow-inner"
+                style={{ backgroundColor: '#0f172a', color: '#ffffff' }}
               />
               <button
                 type="submit"
                 disabled={!input.trim() || isLoading}
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 disabled:opacity-40 text-white p-2.5 rounded-xl transition-all shadow-md flex items-center justify-center shrink-0 cursor-pointer"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 disabled:opacity-40 text-slate-950 font-extrabold p-2.5 rounded-xl transition-all shadow-md flex items-center justify-center shrink-0 cursor-pointer"
+                title="Gửi câu hỏi"
               >
-                <Send className="w-4 h-4" />
+                <Send className="w-4 h-4 text-slate-950 stroke-[2.5]" />
               </button>
             </form>
           </motion.div>

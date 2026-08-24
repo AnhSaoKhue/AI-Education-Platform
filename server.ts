@@ -25,8 +25,8 @@ async function startServer() {
     });
   }
 
-  // System instruction for Hoàng Hải Yến ( Anh Sao Khue)
-  const SYSTEM_INSTRUCTION = `Bạn là "Hoàng Hải Yến ( Anh Sao Khue)" - Trợ lý ảo AI giáo dục thông minh, trách nhiệm và tâm huyết của hệ thống "AI Education Platform - Anh Sao Khue" (Hotline/ĐIỆN THOẠI: 0346513056).
+  // System instruction for Miss Anh Sao Khue
+  const SYSTEM_INSTRUCTION = `Bạn là "Miss Anh Sao Khue" - Trợ lý ảo AI giáo dục thông minh, trách nhiệm và tâm huyết của hệ thống "AI Education Platform - Anh Sao Khue" (Hotline/ĐIỆN THOẠI: 0346513056).
 
 Nhiệm vụ chính của bạn:
 1. Hỗ trợ giáo viên trong việc giảng dạy, tư vấn phương pháp sư phạm, soạn giáo án, tạo đề thi, câu hỏi kiểm tra miệng, quản lý lớp học và theo dõi chuyên cần học sinh.
@@ -37,9 +37,9 @@ Yêu cầu nghiêm ngặt:
 - Không ảo giác, không phịa thông tin vô căn cứ.
 - Luôn tuân thủ đạo đức nhà giáo, chuẩn mực xã hội, an toàn pháp luật.
 - Ngôn ngữ: Tiếng Việt chuẩn mực, ấm áp, có trách nhiệm.
-- Xưng danh: xưng "Hoàng Hải Yến ( Anh Sao Khue)" hoặc "em/mình", gọi người dùng là "Thầy/Cô" hoặc "bạn".`;
+- Xưng danh: xưng "Miss Anh Sao Khue" hoặc "em/mình", gọi người dùng là "Thầy/Cô" hoặc "bạn".`;
 
-  // API Route for AI Chatbot Hoàng Hải Yến ( Anh Sao Khue)
+  // API Route for AI Chatbot Miss Anh Sao Khue
   app.post("/api/chat", async (req, res) => {
     try {
       const { message, history } = req.body;
@@ -52,7 +52,7 @@ Yêu cầu nghiêm ngặt:
         // Fallback response if GEMINI_API_KEY is not configured yet
         return res.json({
           reply:
-            "Xin chào Thầy/Cô! Em là Hoàng Hải Yến ( Anh Sao Khue). Hiện tại khóa GEMINI_API_KEY chưa được cấu hình, nhưng em vẫn sẵn sàng hỗ trợ Thầy/Cô sử dụng các tính năng điểm danh, kiểm tra miệng và quản lý bài tập!",
+            "Xin chào Thầy/Cô! Em là Miss Anh Sao Khue. Hiện tại khóa GEMINI_API_KEY chưa được cấu hình, nhưng em vẫn sẵn sàng hỗ trợ Thầy/Cô sử dụng các tính năng điểm danh, kiểm tra miệng và quản lý bài tập!",
         });
       }
 
@@ -83,13 +83,13 @@ Yêu cầu nghiêm ngặt:
         },
       });
 
-      const reply = response.text || "Em là Hoàng Hải Yến ( Anh Sao Khue), em luôn sẵn sàng lắng nghe Thầy/Cô ạ!";
+      const reply = response.text || "Em là Miss Anh Sao Khue, em luôn sẵn sàng lắng nghe Thầy/Cô ạ!";
       return res.json({ reply });
     } catch (error: any) {
-      console.error("Error in Hoàng Hải Yến ( Anh Sao Khue) chatbot API:", error);
+      console.error("Error in Miss Anh Sao Khue chatbot API:", error);
       return res.status(500).json({
         reply:
-          "Chào Thầy/Cô, hiện tại hệ thống vừa bận một chút ạ. Thầy/Cô thử gửi lại câu hỏi cho Hoàng Hải Yến ( Anh Sao Khue) nhé!",
+          "Chào Thầy/Cô, hiện tại hệ thống vừa bận một chút ạ. Thầy/Cô thử gửi lại câu hỏi cho Miss Anh Sao Khue nhé!",
       });
     }
   });
@@ -267,9 +267,9 @@ HÃY TRẢ VỀ DUY NHẤT MỘT ĐỐI TƯỢNG JSON (KHÔNG KÈM BẤT KỲ V�
         textbookSet: "Tiếng Anh Global Success",
         periodsCount: periodsCount || 1,
         digitalCompetencies:
-          "[NLS1.1] Vận dụng từ điển số Cambridge/Oxford và công cụ phát âm AI chuẩn.\n[NLS2.3] Khai thác kho học liệu âm thanh MP3 và bài tập tương tác số.\n[NLS5.2] Luyện hội thoại phản xạ trực tiếp với AI Hoàng Hải Yến ( Anh Sao Khue).",
+          "[NLS1.1] Vận dụng từ điển số Cambridge/Oxford và công cụ phát âm AI chuẩn.\n[NLS2.3] Khai thác kho học liệu âm thanh MP3 và bài tập tương tác số.\n[NLS5.2] Luyện hội thoại phản xạ trực tiếp với AI Miss Anh Sao Khue.",
         devicesAndSoftware:
-          "Thiết bị: Máy tính GV, Bảng tương tác Smartboard, Loa Bluetooth, Micro thu âm AI.\nPhần mềm: Quizizz, Canva Presentation, Cambridge Dictionary, AI Hoàng Hải Yến ( Anh Sao Khue).",
+          "Thiết bị: Máy tính GV, Bảng tương tác Smartboard, Loa Bluetooth, Micro thu âm AI.\nPhần mềm: Quizizz, Canva Presentation, Cambridge Dictionary, AI Miss Anh Sao Khue.",
         objectives:
           "1. Về Kiến thức: Master 8-12 core vocabulary items regarding hobbies, free time activities and community work. Understand grammar patterns (Present Simple for likes/dislikes, verbs of liking + V-ing).\n2. Về Kĩ năng: Develop 4 language skills (Listening, Speaking, Reading, Writing) with accurate IPA pronunciation /s/ and /z/.\n3. Về Phẩm chất: Encourage positive lifestyle choices, active collaboration and communication in English.",
         objectivesKnowledge:
@@ -339,9 +339,9 @@ HÃY TRẢ VỀ DUY NHẤT MỘT ĐỐI TƯỢNG JSON (KHÔNG KÈM BẤT KỲ V�
       textbookSet: book,
       periodsCount: periodsCount || 1,
       digitalCompetencies:
-        "[NLS1.1] Sử dụng thiết bị kỹ thuật số và phần mềm giảng dạy mô phỏng.\n[NLS2.3] Trích xuất và đánh giá nguồn tài liệu học liệu số chuẩn BGD.\n[NLS5.2] Vận dụng công cụ AI Hoàng Hải Yến ( Anh Sao Khue) kiểm tra đáp án và phân tích bài toán.",
+        "[NLS1.1] Sử dụng thiết bị kỹ thuật số và phần mềm giảng dạy mô phỏng.\n[NLS2.3] Trích xuất và đánh giá nguồn tài liệu học liệu số chuẩn BGD.\n[NLS5.2] Vận dụng công cụ AI Miss Anh Sao Khue kiểm tra đáp án và phân tích bài toán.",
       devicesAndSoftware:
-        "Thiết bị: Máy tính giáo viên/học sinh, Máy chiếu Projector, Bảng tương tác Smartboard.\nPhần mềm: GeoGebra, Canva Education, PhET Simulations, Quizizz, AI Hoàng Hải Yến ( Anh Sao Khue).",
+        "Thiết bị: Máy tính giáo viên/học sinh, Máy chiếu Projector, Bảng tương tác Smartboard.\nPhần mềm: GeoGebra, Canva Education, PhET Simulations, Quizizz, AI Miss Anh Sao Khue.",
       objectives:
         "1. Về Kiến thức: Học sinh nắm vững định nghĩa, tính chất và công thức trọng tâm theo SGK " +
         book +
@@ -482,7 +482,7 @@ HÃY TRẢ VỀ DUY NHẤT MỘT ĐỐI TƯỢNG JSON (KHÔNG KÈM BẤT KỲ V�
 
   // Health check endpoint
   app.get("/api/health", (req, res) => {
-    res.json({ status: "ok", botName: "Hoàng Hải Yến ( Anh Sao Khue)" });
+    res.json({ status: "ok", botName: "Miss Anh Sao Khue" });
   });
 
   // Vite middleware for development

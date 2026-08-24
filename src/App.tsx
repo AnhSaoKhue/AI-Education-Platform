@@ -534,7 +534,7 @@ export default function App() {
               <span className="text-amber-300 font-bold">ĐT: 0346513056</span>
             </div>
             <p className="text-slate-400">
-              Trợ lý ảo Miss Yến còi hỗ trợ 24/7 • Dữ liệu tự động lưu an toàn trên máy
+              Trợ lý AI Miss Anh Sao Khue hỗ trợ 24/7 • Dữ liệu tự động lưu an toàn trên máy
             </p>
           </div>
         </footer>

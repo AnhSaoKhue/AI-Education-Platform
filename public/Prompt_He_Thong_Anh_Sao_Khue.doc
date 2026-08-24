@@ -54,7 +54,7 @@
   <li><strong>PHẦN IV: ORAL TEST & SPEAKING PROMPT - KIỂM TRA MIỆNG & LUYỆN NÓI THU ÂM 4 KỸ NĂNG</strong></li>
   <li><strong>PHẦN V: CLASS & ATTENDANCE PROMPT - QUẢN LÝ LỚP HỌC & ĐIỂM DANH QR THÔNG MINH</strong></li>
   <li><strong>PHẦN VI: LESSON PLAN & HOMEWORK PROMPT - SOẠN GIÁO ÁN GDPT 2018 & GIAO BÀI TẬP</strong></li>
-  <li><strong>PHẦN VII: AI TUTOR PROMPT - CHATBOT TRỢ LÝ SƯ PHẠM MISS YẾN CÒI</strong></li>
+  <li><strong>PHẦN VII: AI TUTOR PROMPT - CHATBOT TRỢ LÝ SƯ PHẠM MISS ANH SAO KHUE</strong></li>
   <li><strong>PHẦN VIII: EXPORT & INTEGRATION PROMPT - XUẤT WORD/PDF, CODE ZIP & XỬ LÝ QUYỀN MICROPHONE</strong></li>
 </ol>
 
@@ -115,7 +115,7 @@ Header chính của ứng dụng phải gồm:
   7. Bài Tập Về Nhà (Homework Management)
   8. Thời Khóa Biểu (Schedule)
   9. Kho Tài Liệu Số (Digital Resources)
-  10. Trợ Lý AI Miss Yến Còi (AI Chatbot)
+  10. Trợ Lý AI Miss Anh Sao Khue (AI Chatbot)
 </div>
 
 <h2>PHẦN III: GRADING & EVALUATION PROMPT - CHẤM VÀ CHỮA BÀI AI 22+ MÔN HỌC</h2>
@@ -196,13 +196,13 @@ Hãy tích hợp phân hệ Trợ lý Soạn Giáo Án tự động theo Công v
 - Nút "Xuất Giáo Án ra Word (.doc)": Tải file Word mẫu giáo án chuẩn trình bày về máy để in ấn và nộp cho Ban Giám Hiệu.
 </div>
 
-<h2>PHẦN VII: AI TUTOR PROMPT - CHATBOT TRỢ LÝ SƯ PHẠM MISS YẾN CÒI</h2>
+<h2>PHẦN VII: AI TUTOR PROMPT - CHATBOT TRỢ LÝ SƯ PHẠM MISS ANH SAO KHUE</h2>
 <div class="prompt-box">
-[PROMPT CHATBOT TRỢ LÝ GIẢNG DẠY MISS YẾN CÒI]
-Xây dựng Trợ lý ảo AI Miss Yến Còi tích hợp sẵn trong ứng dụng với System Prompt sau:
+[PROMPT CHATBOT TRỢ LÝ GIẢNG DẠY MISS ANH SAO KHUE]
+Xây dựng Trợ lý ảo AI Miss Anh Sao Khue tích hợp sẵn trong ứng dụng với System Prompt sau:
 
-"Bạn là Miss Yến Còi - Trợ lý Giáo dục & Giảng dạy thông minh của Hệ thống Ánh Sao Khuê.
-Tính cách của bạn: Thân thiện, tận tụy, hài hước nhẹ nhàng, giàu tình yêu thương học sinh và luôn giữ tác phong sư phạm chuẩn mực.
+"Bạn là Miss Anh Sao Khue - Trợ lý Giáo dục & Giảng dạy thông minh của Hệ thống Ánh Sao Khuê (Hotline: 0346513056).
+Tính cách của bạn: Thân thiện, tận tụy, sâu sắc, giàu tình yêu thương học sinh và luôn giữ tác phong sư phạm chuẩn mực.
 
 Nhiệm vụ chính:
 1. Giải đáp các thắc mắc chuyên môn giảng dạy tất cả 22+ môn học.

@@ -766,39 +766,43 @@
       </main>
     </div>
 
-    <!-- FLOATING INTERACTIVE CHATBOT BUTTON & WIDGET (HOÀNG HẢI YẾN) -->
-    <div class="fixed bottom-4 right-4 z-50">
+    <!-- FLOATING INTERACTIVE CHATBOT BUTTON & WIDGET (MISS ANH SAO KHUE) -->
+    <div class="fixed bottom-4 right-4 z-[9999] pointer-events-auto">
       <!-- Chat Window -->
-      <div v-if="showChatWindow" class="bg-slate-900 border border-cyan-500/40 rounded-3xl w-80 sm:w-96 shadow-2xl overflow-hidden mb-3 flex flex-col h-96 animate-in slide-in-from-bottom duration-200">
-        <div class="bg-gradient-to-r from-blue-900 to-indigo-900 px-4 py-3 border-b border-cyan-500/30 flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <span class="text-lg">🤖</span>
+      <div v-if="showChatWindow" class="bg-slate-900 border-2 border-cyan-500/50 rounded-3xl w-80 sm:w-96 shadow-2xl overflow-hidden mb-3 flex flex-col h-[480px] max-h-[80vh] animate-in slide-in-from-bottom duration-200">
+        <div class="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 px-4 py-3.5 border-b border-cyan-500/40 flex items-center justify-between shrink-0">
+          <div class="flex items-center gap-2.5">
+            <span class="text-xl">🤖</span>
             <div>
-              <div class="font-black text-xs text-white">Hoàng Hải Yến ( Anh Sao Khue) - Trợ lý AI</div>
-              <div class="text-[10px] text-cyan-300">Đồng hành cùng Thầy/Cô 24/7</div>
+              <div class="font-black text-xs sm:text-sm text-white">Miss Anh Sao Khue</div>
+              <div class="text-[10px] text-cyan-300 font-semibold flex items-center gap-1.5">
+                <span>Trợ lý AI 24/7</span>
+                <span>•</span>
+                <span class="text-amber-300">0346513056</span>
+              </div>
             </div>
           </div>
-          <button @click="showChatWindow = false" class="text-slate-400 hover:text-white font-bold">✕</button>
+          <button @click="showChatWindow = false" class="text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs cursor-pointer transition-colors" title="Đóng">✕</button>
         </div>
 
-        <div class="flex-1 p-3 overflow-y-auto space-y-3 text-xs bg-slate-950/60">
+        <div class="flex-1 p-3.5 overflow-y-auto space-y-3 text-xs bg-slate-950 text-white select-text">
           <div v-for="(msg, i) in chatHistory" :key="i" :class="['flex', msg.sender === 'user' ? 'justify-end' : 'justify-start']">
-            <div :class="['max-w-[85%] p-2.5 rounded-2xl leading-relaxed', msg.sender === 'user' ? 'bg-cyan-600 text-white rounded-br-none' : 'bg-slate-800 text-slate-200 border border-slate-700 rounded-bl-none']">
+            <div :class="['max-w-[85%] p-3 rounded-2xl leading-relaxed text-xs sm:text-sm shadow-md select-text', msg.sender === 'user' ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-br-none font-medium border border-blue-400/40' : 'bg-slate-800 text-white border border-slate-700 rounded-bl-none font-normal']">
               {{ msg.text }}
             </div>
           </div>
         </div>
 
-        <form @submit.prevent="sendChatMessage" class="p-2 border-t border-slate-800 bg-slate-900 flex gap-2">
-          <input v-model="chatInput" type="text" placeholder="Hỏi Hoàng Hải Yến ( Anh Sao Khue)..." class="flex-1 bg-slate-950 border border-slate-700 text-xs text-white px-3 py-2 rounded-xl focus:outline-none focus:border-cyan-500" />
-          <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-black px-3 py-2 rounded-xl text-xs cursor-pointer">Gửi</button>
+        <form @submit.prevent="sendChatMessage" class="p-2.5 border-t border-slate-800 bg-slate-900 flex gap-2 shrink-0">
+          <input v-model="chatInput" type="text" placeholder="Hỏi Miss Anh Sao Khue..." class="flex-1 bg-slate-950 border border-slate-700 text-xs sm:text-sm text-white placeholder:text-slate-400 px-3 py-2 rounded-xl focus:outline-none focus:border-cyan-400" />
+          <button type="submit" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-black px-4 py-2 rounded-xl text-xs sm:text-sm cursor-pointer shadow">Gửi</button>
         </form>
       </div>
 
       <!-- Floating Pill Button -->
-      <button @click="showChatWindow = !showChatWindow" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-extrabold px-4 py-3 rounded-full shadow-2xl border border-cyan-400/40 flex items-center gap-2 cursor-pointer active:scale-95 transition-all">
+      <button @click="showChatWindow = !showChatWindow" class="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 hover:from-blue-500 hover:to-indigo-500 text-white font-extrabold px-4 py-3 rounded-full shadow-2xl border-2 border-cyan-400/60 flex items-center gap-2 cursor-pointer active:scale-95 transition-all">
         <span class="text-xl animate-bounce">🤖</span>
-        <span class="text-xs">Trợ lý AI Hoàng Hải Yến ( Anh Sao Khue)</span>
+        <span class="text-xs sm:text-sm">Trợ lý AI Miss Anh Sao Khue</span>
       </button>
     </div>
 
@@ -947,11 +951,11 @@
         const isSpinningOral = ref(false);
         const selectedStudentForOral = ref(null);
 
-        // Chatbot Hoàng Hải Yến ( Anh Sao Khue)
+        // Chatbot Miss Anh Sao Khue
         const showChatWindow = ref(false);
         const chatInput = ref('');
         const chatHistory = ref([
-          { sender: 'model', text: 'Xin chào Thầy/Cô! Em là Hoàng Hải Yến ( Anh Sao Khue) - Trợ lý AI giáo dục Anh Sao Khue. Em luôn sẵn sàng hỗ trợ Thầy/Cô điểm danh, quản lý lớp và soạn giáo án 24/7!' }
+          { sender: 'model', text: 'Xin chào Thầy/Cô! Em là Miss Anh Sao Khue - Trợ lý AI giáo dục Anh Sao Khue. Em luôn sẵn sàng hỗ trợ Thầy/Cô điểm danh, quản lý lớp và soạn giáo án 24/7!' }
         ]);
 
         // Default Class Data
@@ -986,8 +990,8 @@
             className: 'Lớp 7A1',
             gradeLevel: 'THCS - Khối 7',
             textbookSet: 'Kết nối tri thức với cuộc sống',
-            digitalCompetencies: '[NLS1.1] Vận dụng thiết bị kỹ thuật số trong học tập.\n[NLS2.3] Khai thác dữ liệu số mô phỏng đồ thị.\n[NLS5.2] Giải quyết vấn đề bằng công cụ AI Hoàng Hải Yến ( Anh Sao Khue).',
-            devicesAndSoftware: 'Thiết bị: Máy tính GV/HS, Bảng tương tác, Micro thu âm song ngữ.\nPhần mềm: GeoGebra, Canva, PhET, AI Hoàng Hải Yến ( Anh Sao Khue).',
+            digitalCompetencies: '[NLS1.1] Vận dụng thiết bị kỹ thuật số trong học tập.\n[NLS2.3] Khai thác dữ liệu số mô phỏng đồ thị.\n[NLS5.2] Giải quyết vấn đề bằng công cụ AI Miss Anh Sao Khue.',
+            devicesAndSoftware: 'Thiết bị: Máy tính GV/HS, Bảng tương tác, Micro thu âm song ngữ.\nPhần mềm: GeoGebra, Canva, PhET, AI Miss Anh Sao Khue.',
             objectives: 'Học sinh hiểu rõ khái niệm tỷ lệ thuận, lập công thức y = kx và giao tiếp song ngữ Tiếng Anh cơ bản.',
             keyKnowledge: 'Hai đại lượng x và y tỷ lệ thuận với nhau nếu y = kx (k khác 0).',
             warmupActivity: 'Xem video ngắn về ứng dụng tỷ lệ thuận trong đời sống.',
@@ -1279,7 +1283,7 @@
           }, 1200);
         };
 
-        // Chatbot Hoàng Hải Yến ( Anh Sao Khue)
+        // Chatbot Miss Anh Sao Khue
         const sendChatMessage = () => {
           if (!chatInput.value.trim()) return;
           const userMsg = chatInput.value;
@@ -1289,7 +1293,7 @@
           setTimeout(() => {
             chatHistory.value.push({
               sender: 'model',
-              text: 'Dạ, em Hoàng Hải Yến ( Anh Sao Khue) nghe đây ạ! Em có thể giúp Thầy/Cô soạn giáo án, chọn câu hỏi kiểm tra miệng hoặc lập bảng thống kê lớp học ngay ạ!'
+              text: 'Dạ, em Miss Anh Sao Khue nghe đây ạ! Em có thể giúp Thầy/Cô soạn giáo án, chọn câu hỏi kiểm tra miệng hoặc lập bảng thống kê lớp học ngay ạ!'
             });
           }, 600);
         };
